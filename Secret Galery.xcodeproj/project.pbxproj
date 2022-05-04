@@ -23,6 +23,7 @@
 		8EB420552819F4BF007FFF2D /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB420542819F4BF007FFF2D /* FileStorage.swift */; };
 		8EB42058281A047E007FFF2D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB42057281A047E007FFF2D /* Alamofire */; };
 		8EE05FB7281B3ECC00305E50 /* MainVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE05FB6281B3ECB00305E50 /* MainVC+Extensions.swift */; };
+		8EE6F5AA282197D400DC760E /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6F5A9282197D400DC760E /* Notes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8EB420522819F01E007FFF2D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		8EB420542819F4BF007FFF2D /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		8EE05FB6281B3ECB00305E50 /* MainVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Extensions.swift"; sourceTree = "<group>"; };
+		8EE6F5A9282197D400DC760E /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		B83EA603D5332DD567FB2562 /* Pods-Secret Galery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Secret Galery.debug.xcconfig"; path = "Target Support Files/Pods-Secret Galery/Pods-Secret Galery.debug.xcconfig"; sourceTree = "<group>"; };
 		E1CEF6235A6300B488352BDA /* Pods-Secret Galery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Secret Galery.release.xcconfig"; path = "Target Support Files/Pods-Secret Galery/Pods-Secret Galery.release.xcconfig"; sourceTree = "<group>"; };
 		E43177AACB2B929B959702B9 /* Pods_Secret_Galery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Secret_Galery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 				8EB420502819EFD4007FFF2D /* AppSettings.swift */,
 				8EB420542819F4BF007FFF2D /* FileStorage.swift */,
 				8EB4204C28198BD8007FFF2D /* PictureCollectionViewCell.swift */,
+				8EE6F5A9282197D400DC760E /* Notes.swift */,
 				8EB4204D28198BD8007FFF2D /* PictureCollectionViewCell.xib */,
 				8E1180AF28173EC7001591BB /* Main.storyboard */,
 				8E1180B228173EC9001591BB /* Assets.xcassets */,
@@ -243,6 +246,7 @@
 				8EE05FB7281B3ECC00305E50 /* MainVC+Extensions.swift in Sources */,
 				8E1180AA28173EC7001591BB /* AppDelegate.swift in Sources */,
 				8EB420552819F4BF007FFF2D /* FileStorage.swift in Sources */,
+				8EE6F5AA282197D400DC760E /* Notes.swift in Sources */,
 				8EB420512819EFD4007FFF2D /* AppSettings.swift in Sources */,
 				8E1180BE281889E8001591BB /* VC+Allert's.swift in Sources */,
 				8EB420532819F01E007FFF2D /* UserDefaults.swift in Sources */,
