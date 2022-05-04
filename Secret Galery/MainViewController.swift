@@ -11,9 +11,18 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate & UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadImagesToImageArray()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "PictureCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellID)
+    }
+    
+    func loadImagesToImageArray() {
+        guard AppSettings.shared.arrayOfImages.count != 0 else { return }
+        for namePicture in AppSettings.shared.arrayOfImages {
+            guard let image = FileStorage.getImage(withName: namePicture) else { return }
+            images.append(image)
+        }
     }
 
     @IBAction func addImage(_ sender: Any) {
@@ -24,13 +33,12 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate & UI
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppSettings.shared.arrayOfImages.count
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PictureCollectionViewCell
-        guard let picture = FileStorage.getImage(withName: AppSettings.shared.arrayOfImages[indexPath.item]) else { return cell}
-        cell.setup(for: picture)
+        cell.setup(for: images[indexPath.item])
         return cell
     }
     
