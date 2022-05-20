@@ -6,7 +6,7 @@ class AppSettings {
     public static var shared = AppSettings()
     
     private init() { }
- 
+    
     var countOfImages: Int {
         get {
             UserDefaults.standard.integer(forKey: UserDefaultsKeys.countOfImages.rawValue)

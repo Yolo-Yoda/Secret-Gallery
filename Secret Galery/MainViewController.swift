@@ -2,20 +2,39 @@ import UIKit
 
 class MainViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    // MARK: - Public properties
+    
     var images : [UIImage] = []
     let countCells = 3
     let cellID = "PhotoCell"
     let offset : CGFloat = 2.0
-
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    // MARK: - Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadImagesToImageArray()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "PictureCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellID)
     }
-
+    
+    // MARK: - Public methods
+    
+    func loadImagesToImageArray() {
+        guard AppSettings.shared.arrayOfImages.count != 0 else { return }
+        for namePicture in AppSettings.shared.arrayOfImages {
+            guard let image = FileStorage.getImage(withName: namePicture) else { return }
+            images.append(image)
+        }
+    }
+    
+    // MARK: - IBActions
+    
     @IBAction func addImage(_ sender: Any) {
         appendImages()
     }
@@ -23,14 +42,15 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate & UI
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    // MARK: - Public methods
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppSettings.shared.arrayOfImages.count
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PictureCollectionViewCell
-        guard let picture = FileStorage.getImage(withName: AppSettings.shared.arrayOfImages[indexPath.item]) else { return cell}
-        cell.setup(for: picture)
+        cell.setup(for: images[indexPath.item])
         return cell
     }
     
