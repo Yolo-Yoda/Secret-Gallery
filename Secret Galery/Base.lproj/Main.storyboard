@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите ваш пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HFX-PU-O9L">
-                                <rect key="frame" x="40" y="180" width="334" height="40"/>
+                                <rect key="frame" x="40" y="170" width="334" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ieQ-sM-ebS"/>
                                 </constraints>
@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-f9-sFH">
-                                <rect key="frame" x="147" y="230" width="120" height="30"/>
+                                <rect key="frame" x="147" y="220" width="120" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGg-me-giV">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -86,7 +86,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RqW-0S-OQz">
-                                <rect key="frame" x="40" y="290" width="334" height="449"/>
+                                <rect key="frame" x="40" y="280" width="334" height="449"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4da-pl-q1l">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="105"/>
@@ -292,19 +292,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Забыли пин-код?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONT-1d-91w">
-                                <rect key="frame" x="138" y="841.5" width="138" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjD-Yc-uR6">
-                                <rect key="frame" x="175" y="108" width="64" height="62"/>
+                                <rect key="frame" x="175" y="98" width="64" height="62"/>
                                 <color key="tintColor" red="0.6588235294117647" green="0.020488195278111267" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="lock" catalog="system"/>
                                 </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nim-Dy-kVx">
+                                <rect key="frame" x="126" y="827.5" width="162" height="34.5"/>
+                                <color key="tintColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Забыли пин-код?">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="nYh-An-GQd" kind="show" id="ZOq-if-toT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -317,13 +322,13 @@
                             <constraint firstItem="HFX-PU-O9L" firstAttribute="top" secondItem="LjD-Yc-uR6" secondAttribute="bottom" constant="10" id="I8I-d8-jlT"/>
                             <constraint firstItem="LjD-Yc-uR6" firstAttribute="height" secondItem="MDv-vf-9Ux" secondAttribute="height" multiplier="0.593301" id="Mgc-U4-7Ag"/>
                             <constraint firstItem="RqW-0S-OQz" firstAttribute="leading" secondItem="HFX-PU-O9L" secondAttribute="leading" id="ODx-dD-iSE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nim-Dy-kVx" secondAttribute="bottom" id="Sjh-Qp-jbt"/>
                             <constraint firstItem="Hfn-f9-sFH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQl-nR-H8H"/>
-                            <constraint firstItem="LjD-Yc-uR6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bQh-XQ-0h4"/>
+                            <constraint firstItem="LjD-Yc-uR6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="bQh-XQ-0h4"/>
+                            <constraint firstItem="nim-Dy-kVx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hlY-GI-eh7"/>
                             <constraint firstItem="Hfn-f9-sFH" firstAttribute="top" secondItem="HFX-PU-O9L" secondAttribute="bottom" constant="10" id="kIZ-Tj-rPa"/>
                             <constraint firstItem="RqW-0S-OQz" firstAttribute="top" secondItem="Hfn-f9-sFH" secondAttribute="bottom" constant="30" id="ku8-Be-kc7"/>
-                            <constraint firstItem="ONT-1d-91w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mSf-79-Jgk"/>
                             <constraint firstAttribute="trailing" secondItem="HFX-PU-O9L" secondAttribute="trailing" constant="40" id="mpY-kh-YDN"/>
-                            <constraint firstItem="ONT-1d-91w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tvN-az-10B"/>
                             <constraint firstItem="LjD-Yc-uR6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xa1-OB-Tuj"/>
                         </constraints>
                     </view>
@@ -350,6 +355,188 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+        </scene>
+        <!--Изменение пароля-->
+        <scene sceneID="1N8-mv-PMv">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="nYh-An-GQd" customClass="ChangePasswordViewController" customModule="Secret_Galery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bsZ-2z-TFO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQY-I3-HfW">
+                                <rect key="frame" x="16" y="88" width="382" height="774"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4df-IE-JTN">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="774"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZwP-wj-wp4">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="818"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Помните что пароль состоит из 4 символов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="eKx-0V-iEx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="UUV-Ou-zfK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш текущий пароль:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tpr-fD-9ha">
+                                                        <rect key="frame" x="0.0" y="30" width="382" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="4e4-8C-Z44"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mns-K5-32R">
+                                                        <rect key="frame" x="0.0" y="80" width="382" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="hf9-sb-3mk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш новый пароль:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RCZ-KY-3k1">
+                                                        <rect key="frame" x="0.0" y="130" width="382" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="3yO-bV-fMo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-Xg-av0">
+                                                        <rect key="frame" x="0.0" y="180" width="382" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="9BW-ZP-7QV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Повторите новый пароль:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oXj-HU-sa7">
+                                                        <rect key="frame" x="0.0" y="230" width="382" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="2dp-VB-8qZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tsq-mF-lQE">
+                                                        <rect key="frame" x="0.0" y="280" width="382" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="t21-kJ-4Ez"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-B4-6kA">
+                                                        <rect key="frame" x="0.0" y="330" width="382" height="128"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-XN-NrI">
+                                                                <rect key="frame" x="220" y="35.5" width="57" height="57"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="hvh-XN-NrI" secondAttribute="height" id="ppf-Fc-EpV"/>
+                                                                </constraints>
+                                                                <color key="tintColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="✓" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="strokeColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="doneButton:" destination="nYh-An-GQd" eventType="touchUpInside" id="Kk6-ge-qtp"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-RA-YY0">
+                                                                <rect key="frame" x="105" y="35.5" width="57" height="57"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="PHh-RA-YY0" secondAttribute="height" id="O5v-9u-gCB"/>
+                                                                </constraints>
+                                                                <color key="tintColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="✘" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="strokeColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="cancelButton:" destination="nYh-An-GQd" eventType="touchUpInside" id="yKz-W0-MZo"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="hvh-XN-NrI" firstAttribute="centerY" secondItem="NOh-B4-6kA" secondAttribute="centerY" id="cxW-QD-sya"/>
+                                                            <constraint firstItem="PHh-RA-YY0" firstAttribute="centerY" secondItem="NOh-B4-6kA" secondAttribute="centerY" id="kR0-iC-XXs"/>
+                                                            <constraint firstItem="PHh-RA-YY0" firstAttribute="centerX" secondItem="NOh-B4-6kA" secondAttribute="centerX" multiplier="0.7" id="q2c-Qs-EVv"/>
+                                                            <constraint firstItem="hvh-XN-NrI" firstAttribute="centerX" secondItem="NOh-B4-6kA" secondAttribute="centerX" multiplier="1.3" id="uQ6-Cy-fij"/>
+                                                            <constraint firstAttribute="height" constant="128" id="wu9-bp-1eo"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-na-q4R">
+                                                        <rect key="frame" x="0.0" y="468" width="382" height="350"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="350" id="dE6-uN-FUt"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ZwP-wj-wp4" secondAttribute="bottom" id="AyU-Az-eAB"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZwP-wj-wp4" secondAttribute="trailing" id="NWQ-Rj-jQA"/>
+                                            <constraint firstItem="ZwP-wj-wp4" firstAttribute="top" secondItem="4df-IE-JTN" secondAttribute="top" id="gmU-y0-4W9"/>
+                                            <constraint firstItem="ZwP-wj-wp4" firstAttribute="width" secondItem="4df-IE-JTN" secondAttribute="width" id="jG4-Ab-yzP"/>
+                                            <constraint firstItem="ZwP-wj-wp4" firstAttribute="leading" secondItem="4df-IE-JTN" secondAttribute="leading" id="xaD-0z-cu6"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="AbA-6N-fGo"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="aRn-Vc-zEg"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4df-IE-JTN" firstAttribute="leading" secondItem="cQY-I3-HfW" secondAttribute="leading" id="0jv-JE-CWc"/>
+                                    <constraint firstAttribute="bottom" secondItem="4df-IE-JTN" secondAttribute="bottom" id="Hth-NK-Uu3"/>
+                                    <constraint firstItem="4df-IE-JTN" firstAttribute="top" secondItem="cQY-I3-HfW" secondAttribute="top" id="XsP-qo-CAG"/>
+                                    <constraint firstAttribute="trailing" secondItem="4df-IE-JTN" secondAttribute="trailing" id="lhS-MC-SJ2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f1T-d9-tlf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f1T-d9-tlf" firstAttribute="bottom" secondItem="cQY-I3-HfW" secondAttribute="bottom" id="QKV-g6-S0W"/>
+                            <constraint firstItem="f1T-d9-tlf" firstAttribute="trailing" secondItem="cQY-I3-HfW" secondAttribute="trailing" constant="16" id="SBF-Hs-9xI"/>
+                            <constraint firstItem="cQY-I3-HfW" firstAttribute="top" secondItem="f1T-d9-tlf" secondAttribute="top" id="euY-HD-B8k"/>
+                            <constraint firstItem="cQY-I3-HfW" firstAttribute="leading" secondItem="f1T-d9-tlf" secondAttribute="leading" constant="16" id="o0F-uR-ndl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Изменение пароля" id="oag-kW-bcN">
+                        <barButtonItem key="backBarButtonItem" id="hZL-Cv-bq2">
+                            <color key="tintColor" red="0.60392159219999997" green="0.12549020350000001" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firstNewPassword" destination="Clw-Xg-av0" id="sGN-Pw-PSj"/>
+                        <outlet property="oldPassword" destination="Mns-K5-32R" id="cnB-hN-u8H"/>
+                        <outlet property="scrollView" destination="4df-IE-JTN" id="jct-3U-RrZ"/>
+                        <outlet property="secondNewPassword" destination="Tsq-mF-lQE" id="pc7-mR-iQn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBh-hp-UP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="854"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="B49-Tc-JkG">
@@ -423,7 +610,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6J7-sn-UZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+            <point key="canvasLocation" x="32" y="84"/>
         </scene>
     </scenes>
     <resources>
@@ -434,6 +621,9 @@
         <image name="smallcircle.filled.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

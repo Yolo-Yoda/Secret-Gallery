@@ -16,6 +16,9 @@
 		8E1180B628173EC9001591BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1180B428173EC9001591BB /* LaunchScreen.storyboard */; };
 		8E1180BE281889E8001591BB /* VC+Allert's.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1180BD281889E8001591BB /* VC+Allert's.swift */; };
 		8E1180C028189A6C001591BB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1180BF28189A6C001591BB /* MainViewController.swift */; };
+		8E452DBE2836D2AB003B6BC0 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E452DBD2836D2AB003B6BC0 /* ChangePasswordViewController.swift */; };
+		8E452DC12836D646003B6BC0 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 8E452DC02836D646003B6BC0 /* SwiftKeychainWrapper */; };
+		8E452DC42836D8AF003B6BC0 /* ChangePasswordVC+Allerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E452DC32836D8AF003B6BC0 /* ChangePasswordVC+Allerts.swift */; };
 		8EB4204E28198BD8007FFF2D /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4204C28198BD8007FFF2D /* PictureCollectionViewCell.swift */; };
 		8EB4204F28198BD8007FFF2D /* PictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB4204D28198BD8007FFF2D /* PictureCollectionViewCell.xib */; };
 		8EB420512819EFD4007FFF2D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB420502819EFD4007FFF2D /* AppSettings.swift */; };
@@ -37,6 +40,9 @@
 		8E1180B728173EC9001591BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1180BD281889E8001591BB /* VC+Allert's.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Allert's.swift"; sourceTree = "<group>"; };
 		8E1180BF28189A6C001591BB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8E452DBD2836D2AB003B6BC0 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		8E452DC22836D660003B6BC0 /* Secret Galery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Secret Galery.entitlements"; sourceTree = "<group>"; };
+		8E452DC32836D8AF003B6BC0 /* ChangePasswordVC+Allerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordVC+Allerts.swift"; sourceTree = "<group>"; };
 		8EB4204C28198BD8007FFF2D /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EB4204D28198BD8007FFF2D /* PictureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureCollectionViewCell.xib; sourceTree = "<group>"; };
 		8EB420502819EFD4007FFF2D /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -56,6 +62,7 @@
 			files = (
 				8EB42058281A047E007FFF2D /* Alamofire in Frameworks */,
 				3DBBD03C832FF5E5966A7EBB /* Pods_Secret_Galery.framework in Frameworks */,
+				8E452DC12836D646003B6BC0 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +99,15 @@
 		8E1180A828173EC7001591BB /* Secret Galery */ = {
 			isa = PBXGroup;
 			children = (
+				8E452DC22836D660003B6BC0 /* Secret Galery.entitlements */,
 				8E1180A928173EC7001591BB /* AppDelegate.swift */,
 				8E1180AB28173EC7001591BB /* SceneDelegate.swift */,
 				8E1180AD28173EC7001591BB /* PinViewController.swift */,
 				8E1180BD281889E8001591BB /* VC+Allert's.swift */,
 				8E1180BF28189A6C001591BB /* MainViewController.swift */,
 				8EE05FB6281B3ECB00305E50 /* MainVC+Extensions.swift */,
+				8E452DBD2836D2AB003B6BC0 /* ChangePasswordViewController.swift */,
+				8E452DC32836D8AF003B6BC0 /* ChangePasswordVC+Allerts.swift */,
 				8EB420522819F01E007FFF2D /* UserDefaults.swift */,
 				8EB420502819EFD4007FFF2D /* AppSettings.swift */,
 				8EB420542819F4BF007FFF2D /* FileStorage.swift */,
@@ -140,6 +150,7 @@
 			name = "Secret Galery";
 			packageProductDependencies = (
 				8EB42057281A047E007FFF2D /* Alamofire */,
+				8E452DC02836D646003B6BC0 /* SwiftKeychainWrapper */,
 			);
 			productName = "Secret Galery";
 			productReference = 8E1180A628173EC7001591BB /* Secret Galery.app */;
@@ -171,6 +182,7 @@
 			mainGroup = 8E11809D28173EC7001591BB;
 			packageReferences = (
 				8EB42056281A047E007FFF2D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8E452DBF2836D646003B6BC0 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = 8E1180A728173EC7001591BB /* Products */;
 			projectDirPath = "";
@@ -251,6 +263,8 @@
 				8E1180BE281889E8001591BB /* VC+Allert's.swift in Sources */,
 				8EB420532819F01E007FFF2D /* UserDefaults.swift in Sources */,
 				8EB4204E28198BD8007FFF2D /* PictureCollectionViewCell.swift in Sources */,
+				8E452DBE2836D2AB003B6BC0 /* ChangePasswordViewController.swift in Sources */,
+				8E452DC42836D8AF003B6BC0 /* ChangePasswordVC+Allerts.swift in Sources */,
 				8E1180AC28173EC7001591BB /* SceneDelegate.swift in Sources */,
 				8E1180C028189A6C001591BB /* MainViewController.swift in Sources */,
 			);
@@ -400,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Secret Galery/Secret Galery.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU4UB25UN9;
@@ -429,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Secret Galery/Secret Galery.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU4UB25UN9;
@@ -476,6 +492,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E452DBF2836D646003B6BC0 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		8EB42056281A047E007FFF2D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -487,6 +511,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E452DC02836D646003B6BC0 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E452DBF2836D646003B6BC0 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
 		8EB42057281A047E007FFF2D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8EB42056281A047E007FFF2D /* XCRemoteSwiftPackageReference "Alamofire" */;

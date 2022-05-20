@@ -9,6 +9,15 @@
           "revision": "354dda32d89fc8cd4f5c46487f64957d355f53d8",
           "version": "5.6.1"
         }
+      },
+      {
+        "package": "SwiftKeychainWrapper",
+        "repositoryURL": "https://github.com/jrendel/SwiftKeychainWrapper",
+        "state": {
+          "branch": null,
+          "revision": "185a3165346a03767101c4f62e9a545a0fe0530f",
+          "version": "4.0.1"
+        }
       }
     ]
   },

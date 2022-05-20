@@ -4,6 +4,8 @@ import Alamofire
 
 extension MainViewController {
     
+    // MARK: - Public methods
+    
     func openGalery() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
             let imagePicker = UIImagePickerController()
@@ -77,7 +79,7 @@ extension MainViewController {
         AppSettings.shared.countOfImages += 1
         self.collectionView.reloadData()
     }
-                    
+    
     func appendImages() {
         let alert = UIAlertController(title: nil,
                                       message: nil,
@@ -96,7 +98,7 @@ extension MainViewController {
         
         present(alert, animated: true)
     }
-                      
+    
     func showURLAllert() {
         let alertController = UIAlertController(title: "Введите URL",
                                                 message: nil,
@@ -112,13 +114,13 @@ extension MainViewController {
             }
         }
         let cancelAction = UIAlertAction(title: "Отмена",
-                                          style: .destructive) { (_) in }
-         alertController.addTextField { (textField) in
-             textField.placeholder = "Введите URL"
-         }
-         alertController.addAction(confirmAction)
-         alertController.addAction(cancelAction)
-         self.present(alertController, animated: true, completion: nil)
+                                         style: .destructive) { (_) in }
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Введите URL"
+        }
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func incorrectURLAllert() {
